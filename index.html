@@ -6,13 +6,21 @@
 </head>
 
 <body>
-<div id='map' style='width: 400px; height: 300px;'></div>
+<div class='sidebar pad2'>Listing</div>
+<div id='map' class='map pad2'>Map</div>
 <script>
   mapboxgl.accessToken = 'pk.eyJ1IjoicGF0dGFwcmF0ZWVrIiwiYSI6ImNqcWVva2d0ZDF5Zm8zeHBiYnVqNTY0azIifQ.-W8Aeo3lYRSJmfv24FUx7g';
-  var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11'
-  });
+// This adds the map to your page
+var map = new mapboxgl.Map({
+  // container id specified in the HTML
+  container: 'map',
+  // style URL
+  style: 'mapbox://styles/mapbox/light-v10',
+  // initial position in [lon, lat] format
+  center: [-77.034084, 38.909671],
+  // initial zoom
+  zoom: 14
+});
 </script>
 </body>
 
